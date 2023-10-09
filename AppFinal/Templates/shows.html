@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% extends 'padre.html' %}
+    {% block contenidoQueCambia %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Página de Shows</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            padding: 20px 0;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        .button-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .back-button {
+            background-color: #0000FF;
+            color: blue;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Estilos para los videos y títulos */
+        .video-container {
+            margin-bottom: 20px;
+        }
+
+        .video-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algunos Shows</h1>
+
+    <div class="video-container">
+        <p class="video-title">"Cumpleaños Rockero"</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vevPvLVxQjM?si=3aUrpPktmQs4e4ED" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-container">
+        <p class="video-title">"Boda Caro y Carlos"</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TWG0C8OB7ww?si=HdUgTLRL2ZB2AA6C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="button-container">
+        <a class="btn btn-primary" href="{% url 'Inicio' %}">Inicio</a>
+    </div>
+</body>
+</html>
+{% endblock contenidoQueCambia %}

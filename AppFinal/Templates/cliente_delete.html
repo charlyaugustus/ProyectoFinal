@@ -1,0 +1,13 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    <form action="{% url 'ClienteDelete' cliente.id %}" method="post">
+        {% csrf_token %}
+
+        <p style="color: red;">¿Está seguro que quiere eliminar el cliente?</p>
+
+        <button type="submit" style="background-color: red; color: white;">Confirmar</button>
+        <button style="background-color: blue; color: white;"><a href="{% url 'Inicio' %}" style="text-decoration: none; color: white;">Cancelar</a></button>
+    </form>
+{% endblock contenidoQueCambia %}
+

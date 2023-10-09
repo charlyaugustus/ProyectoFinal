@@ -1,0 +1,30 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+<style>
+   
+
+    /* Estilos para centrar el botón "Inicio" */
+    .button-container {
+        text-align: center; /* Centra contenido horizontalmente */
+        margin-top: 20px; /* Espacio en la parte superior */
+    }
+
+    .button-container a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #0000FF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+</style>
+
+    <h1>Gracias por visitarnos, vuelva cuando guste</h1>
+
+    
+        <div class="button-container">
+            <a class="btn btn-primary"  href="{% url 'Inicio' %}" >Inicio</a>
+
+{% endblock contenidoQueCambia %}

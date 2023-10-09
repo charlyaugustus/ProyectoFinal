@@ -1,0 +1,13 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    
+<h1> Lugares de los Eventos </h1>
+    <p> "Lugares" </p>
+
+    <ul>
+        {% for lugar in lugares %}
+            <li> {{lugar}} </li>    
+        {% endfor %}
+    </ul>
+{% endblock contenidoQueCambia %}

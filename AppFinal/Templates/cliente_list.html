@@ -1,0 +1,33 @@
+{% extends 'padre.html' %}
+{% block contenidoQueCambia %}
+
+<style>
+  .boton-eliminar {
+    background-color: red;
+    color: white;
+  }
+
+  .boton-editar {
+    background-color: blue;
+    color: white;
+  }
+</style>
+
+<ul>
+  {% for cliente in clientes %}
+    <li>
+        <a href="{% url 'ClienteDetalle' cliente.id%}"> {{cliente.nombre}} </a>
+    </li>
+    <div style="display: flex; column-gap: 5px">
+        <button class="boton-eliminar">
+            <a href="{% url 'ClienteDelete' cliente.id %}" style="text-decoration: none; color: white;">Eliminar</a>
+        </button>
+        <button class="boton-editar">
+            <a href="{% url 'ClienteUpdate' cliente.id %}" style="text-decoration: none; color: white;">Editar</a>
+        </button>
+    </div>
+  {% endfor %}
+</ul>
+
+{% endblock contenidoQueCambia %}
+

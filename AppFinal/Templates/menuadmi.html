@@ -1,0 +1,67 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Botones de Navegación</title>
+    <style>
+        /* Estilo general para los botones de navegación */
+        .boton-navegacion {
+            background-color: blue; /* Color de fondo azul */
+            color: white; /* Color del texto blanco */
+            padding: 10px 20px; /* Ajusta el relleno según tus preferencias */
+            text-decoration: none; /* Quita la subraya predeterminada de los enlaces */
+            display: block; /* Hacer que el botón sea un bloque */
+            margin: 10px auto; /* Espaciado entre botones y centrar horizontalmente */
+            text-align: center; /* Centrar el texto dentro del botón */
+        }
+
+        /* Estilo para el botón de inicio */
+        .boton-inicio {
+            text-align: center; /* Centrar el texto dentro del div */
+            margin-top: 20px; /* Espaciado superior */
+        }
+
+        /* Estilo para el enlace dentro del botón de inicio */
+        .boton-inicio a {
+            background-color: blue; /* Color de fondo azul */
+            color: white; /* Color del texto blanco */
+            padding: 10px 20px; /* Ajusta el relleno según tus preferencias */
+            text-decoration: none; /* Quita la subraya predeterminada de los enlaces */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Selecciona una página para navegar:</h1>
+    <div>
+        <button class="boton-navegacion" onclick="window.open('/admin/', '_blank')">Acceso directo a la Base Adm</button>
+        <button class="boton-navegacion" onclick="window.open('/admin/auth/user/', '_blank')">Editar/Crear Usuarios</button>
+        <button class="boton-navegacion" onclick="window.open('/admin/AppFinal/avatar/', '_blank')">Agregar Avatar</button>
+        <button class="boton-navegacion" onclick="window.open('{% url 'EditarPefil' %}', '_blank')">Editar Perfiles de Administrador</button>
+        <button class="boton-navegacion" onclick="window.open('{% url 'ListaServicios' %}', '_blank')">Futuros Servicios</button>
+        <button class="boton-navegacion" onclick="window.open('{% url 'ClienteCrear' %}', '_blank')">Crear Clientes</button>
+        <button class="boton-navegacion" onclick="window.open('{% url 'BusquedaClientes' %}', '_blank')">Búsqueda de Clientes</button>
+        <button class="boton-navegacion" onclick="window.open('{% url 'ClienteLista' %}', '_blank')">Clientes/Edición</button>
+        <button class="boton-navegacion" onclick="window.open('{% url 'TrabajoFormulario' %}', '_blank')">Ver  trabajos a entregar</button>
+        <button class="boton-navegacion" onclick="window.open('{% url 'ListaTrabajos' %}', '_blank')">Trabajos entregados</button>
+        <button class="boton-navegacion" onclick="window.open('/admin/AppFinal/trabajos_entregar/', '_blank')">Editar Trabajos</button>
+        <button class="boton-navegacion" onclick="window.open('{% url 'Registrar' %}', '_blank')">Registrar</button>
+        <button class="boton-navegacion" onclick="window.open('https://www.google.com', '_blank')">Google</button>
+        <button class="boton-navegacion" onclick="window.open('https://www.facebook.com', '_blank')">Facebook</button>
+        <button class="boton-navegacion" onclick="window.open('https://www.twitter.com', '_blank')">Twitter</button>
+    </div>
+    
+
+    <div class="boton-inicio">
+        
+        
+        <a class="btn btn-primary"  href="{% url 'Inicio' %}" >Inicio</a>
+    </div>
+</body>
+
+</html>
+{% endblock contenidoQueCambia %}

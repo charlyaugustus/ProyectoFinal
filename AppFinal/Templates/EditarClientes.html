@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+       
+
+<form action="{% url 'EditarClientes' id %}" method="post">{% csrf_token %}
+
+
+    {{clienteFormulario.as_div}}
+
+    <button type="submit"> Actualizar </button>
+</form>
+
+{% endblock contenidoQueCambia %}

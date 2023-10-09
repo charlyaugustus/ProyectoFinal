@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% extends 'padre.html' %}
+    {% block contenidoQueCambia %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Página de Shows</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            padding: 20px 0;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        .button-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .back-button {
+            background-color: #0000FF;
+            color: blue;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>A cerca de mí...</h1>
+    <p>"Mi nombre es Carlos Olivera. Soy analista de prevención de fraudes comerciales, con conocimientos en materia contable,<br> tratanto de insertarme en el mundo de la programación, visualización y ciencia de datos. <br>
+        Tomé el curso para aprender a programar en Python y me llevo una gran herramienta que es la programación web. <br>
+        En pocas palabras, para mi trabajo me servirá con creces ya que voy a poder mostrar información para análisis de una manera muchísima más completa, <br>dinámica y a la mano de cualquiera que la precise, no tengo dudas".</p>
+
+        <p> En cuanto al Proyecto, se trata de una web de un servicio de Música en vivo para Eventos.<br>
+            La página muestra con videos de YouTube, obviamente seleccionados para el Proyecto, <br>como se podría ver una web que ofrezca estos sevicios.
+            <br>Se pueden elegir distintas opciones como ¡100! canciones que pueden sonar en tu fiesta.</p>
+    
+
+    <<div class="button-container">
+        <a class="btn btn-primary"  href="{% url 'Inicio' %}" >Inicio</a>
+    </div>
+        </a>
+    </div>
+</body>
+</html>
+{% endblock contenidoQueCambia %}

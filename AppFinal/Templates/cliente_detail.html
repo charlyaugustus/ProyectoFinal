@@ -1,0 +1,15 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    
+    <h1 style="font-family: 'Helvetica Neue', sans-serif; font-weight: bold; font-size: 24px;">Detalle del Cliente</h1>
+
+    <h4 style="font-family: 'Times New Roman', serif; font-size: 18px;">Nombre: {{cliente.nombre}}</h4>
+    <h4 style="font-family: 'Times New Roman', serif; font-size: 18px;">Apellido: {{cliente.apellido}}</h4>
+    <h4 style="font-family: 'Times New Roman', serif; font-size: 18px;">Email: {{cliente.email}}</h4>
+    <h4 style="font-family: 'Times New Roman', serif; font-size: 18px;">Tipo de servicio: {{cliente.tipo_servicio}}</h4>
+    <h4 style="font-family: 'Times New Roman', serif; font-size: 18px;">Teléfono: {{cliente.telefono}}</h4>
+
+    <a class="btn btn-primary" href="{% url 'Inicio' %}">Inicio</a>
+
+{% endblock contenidoQueCambia %}

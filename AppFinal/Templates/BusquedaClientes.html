@@ -1,0 +1,8 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+<form action="{% url 'ResultadoBusquedaClientes' %}" method="get">
+    <p>Nombre del Cliente: <input type="text" name="nombre"></p>
+    <button type="submit" class="boton-azul" style="background-color: blue; color: white;">Enviar</button>
+</form>
+{% endblock contenidoQueCambia %}

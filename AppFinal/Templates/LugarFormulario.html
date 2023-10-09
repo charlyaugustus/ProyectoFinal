@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+       
+
+<form action="{% url 'LugarFormulario' %}"method="post">{% csrf_token %}
+
+
+   {{lugarFormulario.as_p}}
+
+    <button type="submit"> Enviar </button>
+</form>
+
+{% endblock contenidoQueCambia %}

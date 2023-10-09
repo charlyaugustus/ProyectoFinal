@@ -1,0 +1,63 @@
+{% extends "padre.html" %}
+
+{% block contenidoQueCambia %}
+  <div class="formulario">
+    <h1>Tipos de servicios que ofrecemos:</h1>
+    <ul>
+      <li>1- Mix de cumbia</li>
+      <li>2- Cuarteto, reguetón y latinos</li>
+      <li>3- Fiesta ochentosa</li>
+      <li>4- Música nacional de los 60 y los 70</li>
+      <li>5- Música latina e internacional</li>
+      <li>6 -Música disco</li>
+      <li>7- Show de jazz</li>
+      <li>8- Bossa nova</li>
+      <li>9- Batucada</li>
+    </ul>
+    
+    <form action="{% url 'ServicioFormulario' %}" method="post">
+      {% csrf_token %}
+      <div class="form-container">
+        {{ miFormulario.as_p }}
+      </div>
+      <button type="submit" class="btn-submit">Enviar</button>
+    </form>
+  </div>
+
+  <style>
+    /* Estilos para alinear el contenido al centro y darle estilo al formulario */
+    .formulario {
+      text-align: center;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .form-container {
+      margin-top: 20px;
+    }
+
+    .btn-submit {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+{% endblock contenidoQueCambia %}

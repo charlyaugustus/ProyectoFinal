@@ -1,0 +1,10 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    <form action="{% url 'ClienteUpdate' cliente.id %}" method="post">{% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" class="btn-primary">Actualizar</button>
+    </form>
+{% endblock contenidoQueCambia %}

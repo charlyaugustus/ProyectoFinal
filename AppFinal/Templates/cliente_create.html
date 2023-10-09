@@ -1,0 +1,12 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+<h1>Crear Clientes</h1>
+    <form action="{% url 'ClienteCrear' %}" method="post">{% csrf_token %}
+
+        {{form.as_p}}
+
+        <button type="submit"> Enviar </button>
+    </form>
+{% endblock contenidoQueCambia %}

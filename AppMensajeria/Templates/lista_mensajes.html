@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Mensajes</title>
+</head>
+<body>
+    <h1>Lista de Mensajes</h1>
+    <ul>
+        {% for mensaje in mensajes %}
+            <li>
+                De: {{ mensaje.emisor }}
+                <br>
+                Mensaje: {{ mensaje.contenido }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Enviar Mensaje</h2>
+    <form method="post" action="{% url 'enviar_mensaje' %}">
+        {% csrf_token %}
+        <label for="receptor_id">Destinatario:</label>
+        <select name="receptor_id" id="receptor_id">
+            {% for usuario in usuarios %}
+                <option value="{{ usuario.id }}">{{ usuario.username }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="contenido">Mensaje:</label>
+        <textarea name="contenido" id="contenido" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

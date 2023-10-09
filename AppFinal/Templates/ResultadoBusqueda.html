@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+  <h1 style="font-family: Arial, sans-serif;">Resultados de la búsqueda de Clientes:</h1>
+  
+  {% if nombre %}
+    <table style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; border: 1px solid #0073e6;">
+      <thead style="background-color: #0073e6; color: #ffffff;">
+        <tr>
+          <th style="padding: 10px; border: 1px solid #ffffff;">Nombre del Cliente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #0073e6;">{{ nombre }}</td>
+        </tr>
+      </tbody>
+    </table>
+  {% else %}
+    <p>No existe</p>
+  {% endif %}
+{% endblock contenidoQueCambia %}

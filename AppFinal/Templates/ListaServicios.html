@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios por Confirmar</title>
+    <style>
+        body {
+            background-image: url('tu_imagen_de_fondo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .presentacion {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        /* Estilos para centrar el botón "Inicio" */
+        .button-container {
+            text-align: center; /* Centra contenido horizontalmente */
+            margin-top: 20px; /* Espacio en la parte superior */
+        }
+
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0000FF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentacion">
+        <h1>Servicios por Confirmar</h1>
+        <ul>
+            {% for servicio in servicios %}
+                <li>{{ servicio }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="button-container">
+        <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+
+    
+    </div>
+</body>
+</html>
